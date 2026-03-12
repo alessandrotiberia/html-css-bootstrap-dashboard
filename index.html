@@ -12,18 +12,40 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark"> <!--colore dark alla navbar -->
+    <header> <!--con navbar-expand-lg: tieni chiuso menù fino a schermo desktop-->
+
+        <nav class="navbar  navbar-expand-lg navbar-dark bg-dark"> <!--colore dark alla navbar -->
             <div class="container"> <!--contenitore dove inserire tutto-->
-                <a class="navbar-brand" href="#">
-                    <!--data classe img e messa grandezza della paperella css-->
-                    <img class="img" src="./img/duck.png" alt="paperella motivazionale">
+
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="img me-2" src="./img/duck.png" alt="paperella motivazionale">
+
+                    <span class="d-none d-lg-block text-white">Catalogo Libri</span>
                 </a>
                 <!--inserire bottone finto delle impostazioni-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#menuMobile">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuMobile">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="menuMobile"> <!--classe che nasconde -->
+                        <!--navbar nav dice che ul non è una lista ma menu di navigazione-->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">Anagrafica Utenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">Storico Prestiti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50" href="#">Help</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Cerca...">
+                        <button class="btn btn-outline-light" type="submit">Cerca</button>
+                    </form>
+
+                </div>
             </div>
         </nav>
     </header>
@@ -32,13 +54,13 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <!-- display flex e con justify content-between : prendi due elementi e mettili più lontano possibile.
             mb margin bottom ovvero margine sotto.-->
-         <h2>Catalogo Libri</h2>
-
-        <button class="btn btn-primary">Aggiungi Libro</button> <!--btn rende bottone cliccabile-->
-        <!--btn primary rende colore blu come da screen.-->
+            <h2>Catalogo Libri</h2>
+            <button class="btn btn-primary">Aggiungi Libro</button> <!--btn rende bottone cliccabile-->
+            <!--btn primary rende colore blu come da screen.-->
         </div>
-        
+
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
