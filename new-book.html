@@ -34,12 +34,48 @@
                     <input type="text" id="nome" class="form-control" placeholder="Inserisci il Cognome dell'autore">
                 </div>
             </div>
-            <div class="col-12">
-                <label for="Titolo">Titolo</label> 
+            <div class="col-12"> <!--form label : ma l'etichetta di un form.-->
+                <label for="Titolo" form="label">Titolo</label>
                 <input type="text" id="Titolo" class="form-control" placeholder="inserisci titolo del libro">
                 <div class="form-text">Titolo versione italiana</div> <!--commento sotto a titolo-->
             </div>
+            <div class="row mb-4">
 
+                <div class=" col-12 col-lg-4">
+                    <label for="Genere" class="form-label">Genere</label>
+                    <select name="Genere" id="Genere">
+                        <option selected>Scegli il genere</option>
+                        <option value="1">Romanzo</option>
+                        <option value="2">Fumetto</option>
+                        <option value="3">Saggio</option>
+                    </select>
+
+                    <div class="col-12 col-md-4 mb-3 mb-md-0">
+                        <label for="Anno" form="label">Anno di pubblicazione</label>
+                        <input type="number" name="Anno" id="Anno" placeholder="Inserisci l'anno">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="ISBN#">ISBN#</label>
+                    <input type="password" name="password" id="password" placeholder="Inserisci il codice ISBN#">
+                </div>
+            </div>
+            <hr class="my-4 text-secondary">
+
+            <div class="row mb-4">
+                <div class="col-12">
+                    <label for="note" class="form-label">Note</label>
+                    <textarea id="note" class="form-control" rows="4"
+                        placeholder="Inserisci eventuali note sul libro"></textarea>
+                </div>
+            </div>
+
+            <div class="form-check mb-4">
+                <input type="checkbox" id="digitale" class="form-check-input">
+                <label for="digitale" class="form-check-label">Disponibile anche in digitale</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
         </form>
     </main>
 </header>
